@@ -67,7 +67,7 @@ export default async function RootLayout({
                                         simple-evals
                                     </a>
                                     <a
-                                        href="https://github.com/YOUR_USERNAME/healthbench-data-creator"
+                                        href="https://github.com/hotake-varytex/healthbench-data-creator"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="text-sm text-muted-foreground hover:text-foreground"
@@ -84,7 +84,7 @@ export default async function RootLayout({
                             <p>
                                 HealthBench Data Creator | Open Source | MIT License |{' '}
                                 <a
-                                    href="https://github.com/YOUR_USERNAME/healthbench-data-creator"
+                                    href="https://github.com/hotake-varytex/healthbench-data-creator"
                                     className="underline hover:text-foreground"
                                 >
                                     Contribute on GitHub

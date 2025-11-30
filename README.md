@@ -43,7 +43,7 @@ Enable physicians and researchers to create high-quality, HealthBench-compliant 
 ### Install & Run
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/healthbench-data-creator.git
+git clone https://github.com/hotake-varytex/healthbench-data-creator.git
 cd healthbench-data-creator
 npm install
 npm run dev
@@ -66,7 +66,7 @@ More setup details: see [SETUP.md](./SETUP.md). Architecture and design notes: s
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/healthbench-data-creator.git
+git clone https://github.com/hotake-varytex/healthbench-data-creator.git
 cd healthbench-data-creator
 
 # Install dependencies
@@ -205,9 +205,9 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 
 ## Support
 
-- 🐛 [Report a bug](https://github.com/YOUR_USERNAME/healthbench-data-creator/issues)
-- 💡 [Request a feature](https://github.com/YOUR_USERNAME/healthbench-data-creator/issues)
-- 📖 [Documentation](https://github.com/YOUR_USERNAME/healthbench-data-creator/wiki)
+- 🐛 [Report a bug](https://github.com/hotake-varytex/healthbench-data-creator/issues)
+- 💡 [Request a feature](https://github.com/hotake-varytex/healthbench-data-creator/issues)
+- 📖 [Documentation](https://github.com/hotake-varytex/healthbench-data-creator/wiki)
 
 ## Citation
 
@@ -216,9 +216,9 @@ If you use this tool in your research, please cite:
 ```bibtex
 @software{healthbench_data_creator,
   title = {HealthBench Data Creator},
-  author = {Your Name},
+  author = {hayato otake},
   year = {2025},
-  url = {https://github.com/YOUR_USERNAME/healthbench-data-creator}
+  url = {https://github.com/hotake-varytex/healthbench-data-creator}
 }
 ```
 

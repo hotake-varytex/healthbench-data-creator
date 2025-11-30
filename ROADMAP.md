@@ -243,8 +243,8 @@ This document outlines the planned features and improvements for HealthBench Dat
 
 We welcome feedback on this roadmap! If you have ideas for features or improvements:
 
-1. **Open an Issue**: [GitHub Issues](https://github.com/YOUR_USERNAME/healthbench-data-creator/issues)
-2. **Start a Discussion**: [GitHub Discussions](https://github.com/YOUR_USERNAME/healthbench-data-creator/discussions)
+1. **Open an Issue**: [GitHub Issues](https://github.com/hotake-varytex/healthbench-data-creator/issues)
+2. **Start a Discussion**: [GitHub Discussions](https://github.com/hotake-varytex/healthbench-data-creator/discussions)
 3. **Submit a PR**: If you want to implement a feature yourself
 
 ## Versioning

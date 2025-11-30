@@ -15,7 +15,7 @@ Before you begin, install:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/healthbench-data-creator.git
+git clone https://github.com/hotake-varytex/healthbench-data-creator.git
 cd healthbench-data-creator
 ```
 

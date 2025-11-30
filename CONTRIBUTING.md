@@ -30,7 +30,7 @@ This project adheres to a [Code of Conduct](./CODE_OF_CONDUCT.md). By participat
 1. **Fork and Clone**
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/healthbench-data-creator.git
+   git clone https://github.com/hotake-varytex/healthbench-data-creator.git
    cd healthbench-data-creator
    ```
 
@@ -115,7 +115,7 @@ When reporting bugs, please include:
 - **Environment details** (OS, browser, Node.js version)
 - **Error messages** or console logs
 
-Use the [Bug Report Template](https://github.com/YOUR_USERNAME/healthbench-data-creator/issues/new?template=bug_report.md).
+Use the [Bug Report Template](https://github.com/hotake-varytex/healthbench-data-creator/issues/new?template=bug_report.md).
 
 ## Suggesting Features
 
@@ -126,7 +126,7 @@ We welcome feature suggestions! Please provide:
 - **Alternatives considered** - What other approaches did you think about?
 - **Additional context** - Any mockups, examples, or references
 
-Use the [Feature Request Template](https://github.com/YOUR_USERNAME/healthbench-data-creator/issues/new?template=feature_request.md).
+Use the [Feature Request Template](https://github.com/hotake-varytex/healthbench-data-creator/issues/new?template=feature_request.md).
 
 ## Submitting Pull Requests
 
@@ -257,8 +257,8 @@ When adding features, please update:
 
 If you have questions:
 
-- Open a [Discussion](https://github.com/YOUR_USERNAME/healthbench-data-creator/discussions)
-- Check existing [Issues](https://github.com/YOUR_USERNAME/healthbench-data-creator/issues)
+- Open a [Discussion](https://github.com/hotake-varytex/healthbench-data-creator/discussions)
+- Check existing [Issues](https://github.com/hotake-varytex/healthbench-data-creator/issues)
 - Read the [README](./README.md)
 
 ## License
