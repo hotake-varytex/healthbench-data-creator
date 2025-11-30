@@ -1,0 +1,71 @@
+{
+    "title": "HealthBench データクリエイター",
+    "description": "OpenAI HealthBench準拠のデータセットを作成、編集、検証します",
+    "getStarted": "始める",
+    "learnMore": "詳細を見る",
+    "features": {
+        "creation": {
+            "title": "データセット作成",
+            "description": "直感的なインターフェースで新しいデータセットを簡単に作成できます。"
+        },
+        "validation": {
+            "title": "検証",
+            "description": "HealthBench基準に対してデータセットを検証します。"
+        },
+        "export": {
+            "title": "エクスポート",
+            "description": "様々な形式でデータをエクスポートできます。"
+        }
+    },
+    "common": {
+        "save": "保存",
+        "cancel": "キャンセル",
+        "delete": "削除",
+        "edit": "編集",
+        "back": "戻る",
+        "backToDashboard": "ダッシュボードに戻る",
+        "loading": "読み込み中...",
+        "projectNotFound": "プロジェクトが見つかりません",
+        "projectNotFoundDesc": "プロジェクト \"{{name}}\" は存在しません。",
+        "importJsonl": "JSONLをインポート",
+        "exportJsonl": "JSONLをエクスポート",
+        "totalExamples": "例の総数",
+        "avgRubrics": "平均ルーブリック数",
+        "avgTurns": "平均ターン数",
+        "qualityScore": "品質スコア",
+        "examples": "例",
+        "manageExamples": "この専門分野のHealthBenchシナリオを管理します",
+        "newExample": "新しい例",
+        "noExamples": "まだ例がありません。最初の例を作成して始めましょう。",
+        "createFirstExample": "最初の例を作成",
+        "configuration": "設定",
+        "evaluationAxes": "評価軸",
+        "commonThemes": "共通テーマ",
+        "noThemes": "テーマが定義されていません",
+        "rubricTemplates": "ルーブリックテンプレート",
+        "reusableTemplates": "再利用可能なテンプレート",
+        "actions": "アクション",
+        "editConfiguration": "設定を編集",
+        "deleteProject": "プロジェクトを削除",
+        "deleteProjectConfirm": "\"{{name}}\" を削除してもよろしいですか？この操作は取り消せません。",
+        "createProject": "プロジェクトを作成",
+        "createNewProject": "新しい専門分野プロジェクトを作成",
+        "createNewProjectDesc": "HealthBenchの例を整理するための新しい医療専門分野プロジェクトを設定します",
+        "basicInfo": "基本情報",
+        "basicInfoDesc": "プロジェクトの名前と説明を入力してください",
+        "displayName": "表示名",
+        "displayNamePlaceholder": "例：漢方ベンチマーク、循環器症例",
+        "descriptionLabel": "説明",
+        "descriptionPlaceholder": "この専門分野プロジェクトの目的と範囲を説明してください...",
+        "evaluationAxesDesc": "このプロジェクトのルーブリックに使用する評価次元を選択してください",
+        "commonAxes": "共通軸",
+        "selectedAxes": "選択された軸",
+        "addCustomAxis": "カスタム軸を追加",
+        "commonThemesDesc": "例を分類するための再利用可能なテーマタグを定義します（オプション）",
+        "themes": "テーマ",
+        "addTheme": "テーマを追加",
+        "addThemePlaceholder": "例：診断、治療、患者教育",
+        "addThemeHint": "Enterキーを押すか+をクリックしてテーマを追加",
+        "creating": "作成中..."
+    }
+}

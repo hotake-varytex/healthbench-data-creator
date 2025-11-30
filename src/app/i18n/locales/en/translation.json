@@ -1,0 +1,71 @@
+{
+    "title": "HealthBench Data Creator",
+    "description": "Create, edit, and validate OpenAI HealthBench-compliant datasets",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More",
+    "features": {
+        "creation": {
+            "title": "Dataset Creation",
+            "description": "Easily create new datasets with our intuitive interface."
+        },
+        "validation": {
+            "title": "Validation",
+            "description": "Validate your datasets against HealthBench standards."
+        },
+        "export": {
+            "title": "Export",
+            "description": "Export your data in various formats."
+        }
+    },
+    "common": {
+        "save": "Save",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "edit": "Edit",
+        "back": "Back",
+        "backToDashboard": "Back to Dashboard",
+        "loading": "Loading...",
+        "projectNotFound": "Project Not Found",
+        "projectNotFoundDesc": "The project \"{{name}}\" does not exist.",
+        "importJsonl": "Import JSONL",
+        "exportJsonl": "Export JSONL",
+        "totalExamples": "Total Examples",
+        "avgRubrics": "Avg Rubrics",
+        "avgTurns": "Avg Turns",
+        "qualityScore": "Quality Score",
+        "examples": "Examples",
+        "manageExamples": "Manage HealthBench scenarios for this specialty",
+        "newExample": "New Example",
+        "noExamples": "No examples yet. Create your first example to get started.",
+        "createFirstExample": "Create First Example",
+        "configuration": "Configuration",
+        "evaluationAxes": "Evaluation Axes",
+        "commonThemes": "Common Themes",
+        "noThemes": "No themes defined",
+        "rubricTemplates": "Rubric Templates",
+        "reusableTemplates": "Reusable templates",
+        "actions": "Actions",
+        "editConfiguration": "Edit Configuration",
+        "deleteProject": "Delete Project",
+        "deleteProjectConfirm": "Are you sure you want to delete \"{{name}}\"? This action cannot be undone.",
+        "createProject": "Create Project",
+        "createNewProject": "Create New Specialty Project",
+        "createNewProjectDesc": "Set up a new medical specialty project to organize your HealthBench examples",
+        "basicInfo": "Basic Information",
+        "basicInfoDesc": "Provide a name and description for your project",
+        "displayName": "Display Name",
+        "displayNamePlaceholder": "e.g., Kampo Benchmark, Cardiology Cases",
+        "descriptionLabel": "Description",
+        "descriptionPlaceholder": "Describe the purpose and scope of this specialty project...",
+        "evaluationAxesDesc": "Select the evaluation dimensions that will be used for rubrics in this project",
+        "commonAxes": "Common Axes",
+        "selectedAxes": "Selected Axes",
+        "addCustomAxis": "Add Custom Axis",
+        "commonThemesDesc": "Define reusable theme tags for categorizing examples (optional)",
+        "themes": "Themes",
+        "addTheme": "Add Theme",
+        "addThemePlaceholder": "e.g., diagnosis, treatment, patient_education",
+        "addThemeHint": "Press Enter or click + to add a theme",
+        "creating": "Creating..."
+    }
+}

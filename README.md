@@ -10,7 +10,7 @@
 
 ## Overview
 
-HealthBench Data Creator is an open-source web application designed for medical professionals and researchers to create, edit, validate, and export datasets in the **OpenAI HealthBench** format. This tool focuses exclusively on **data creation** — evaluation and scoring are handled by OpenAI's [`simple-evals`](https://github.com/openai/simple-evals) framework.
+HealthBench Data Creator is an open-source web application to create, edit, validate, and export datasets in the **OpenAI HealthBench** format. This tool focuses on **data creation** — evaluation and scoring are handled by OpenAI's [`simple-evals`](https://github.com/openai/simple-evals) framework.
 
 ### What is HealthBench?
 
@@ -23,9 +23,7 @@ HealthBench data is stored in JSONL format, with each line representing one comp
 
 ### Project Mission
 
-> Enable physicians and researchers to create high-quality, HealthBench-compliant datasets through an intuitive GUI, with built-in validation and reproducibility.
-
-**This tool does NOT perform evaluation** — it creates the data that can then be evaluated using `simple-evals`.
+Enable physicians and researchers to create high-quality, HealthBench-compliant datasets through an intuitive GUI, with built-in validation and reproducibility. **This tool does NOT perform evaluation** — it creates the data that can then be evaluated using `simple-evals`.
 
 ## Key Features
 
@@ -37,226 +35,26 @@ HealthBench data is stored in JSONL format, with each line representing one comp
 - 📥📤 **JSONL Import/Export**: Seamless integration with existing HealthBench datasets
 - 🔄 **Version Control Ready**: Designed to work with Git-based workflows
 
-## Technology Stack
+## Quick Start
 
-### Core Framework
-- **Next.js 15** (App Router) - Modern React framework with server components
-- **TypeScript 5.0** - Type-safe development
-- **React 19** - Latest React features
+### Prerequisites
+- Node.js 18.17 or later
 
-### UI Library Selection
+### Install & Run
 
-After evaluating multiple options, we chose **shadcn/ui + Radix UI + Tailwind CSS** for the following reasons:
-
-| Library | Pros | Cons | Score |
-|---------|------|------|-------|
-| **shadcn/ui + Radix** | ✅ Copy-paste components (full control)<br>✅ Excellent form handling with React Hook Form<br>✅ Accessible by default (Radix primitives)<br>✅ Tailwind-based (easy customization)<br>✅ Active community & Next.js integration | ⚠️ Requires manual component setup | ⭐⭐⭐⭐⭐ |
-| MUI | ✅ Comprehensive component library<br>✅ Mature ecosystem | ❌ Heavy bundle size<br>❌ Harder to customize deeply | ⭐⭐⭐ |
-| Mantine | ✅ Great form support<br>✅ Good documentation | ⚠️ Less Tailwind-friendly<br>⚠️ Smaller ecosystem | ⭐⭐⭐⭐ |
-| Chakra UI | ✅ Good DX<br>✅ Theme system | ⚠️ Moving to v3 (instability)<br>⚠️ CSS-in-JS overhead | ⭐⭐⭐ |
-
-**Decision: shadcn/ui + Radix UI + Tailwind CSS**
-
-Rationale:
-- **Form-heavy application**: We need robust form handling for complex nested data (rubrics, chat turns). React Hook Form integration is excellent.
-- **Customization**: Copy-paste model means we own the components and can adapt them to HealthBench-specific needs.
-- **Performance**: No runtime CSS-in-JS, Tailwind compiles to minimal CSS.
-- **Accessibility**: Radix UI primitives ensure WCAG compliance out of the box.
-- **Developer Experience**: Great TypeScript support, Next.js 15 compatible.
-
-### Additional Libraries
-- **zod** - Runtime schema validation
-- **react-hook-form** - Form state management
-- **zustand** - Lightweight global state (if needed)
-- **lucide-react** - Icon library
-- **recharts** - Data visualization for summary dashboard
-
-## Architecture
-
-### Project Structure
-
-```
-healthbench-data-creator/
-├── src/
-│   ├── app/
-│   │   ├── layout.tsx                 # Root layout with providers
-│   │   ├── page.tsx                   # Dashboard / Specialty list
-│   │   ├── specialties/
-│   │   │   ├── [name]/
-│   │   │   │   └── page.tsx           # Specialty detail view
-│   │   │   └── new/
-│   │   │       └── page.tsx           # Create new specialty
-│   │   └── api/
-│   │       └── validate/
-│   │           └── route.ts           # Optional validation endpoint
-│   ├── components/
-│   │   ├── ui/                        # shadcn/ui components
-│   │   ├── specialty/
-│   │   │   ├── SpecialtyCard.tsx
-│   │   │   └── SpecialtyForm.tsx
-│   │   ├── example/
-│   │   │   ├── ExampleEditor.tsx      # Main editor for one HealthBench record
-│   │   │   ├── PromptEditor.tsx       # Chat turn editor
-│   │   │   ├── RubricEditor.tsx       # Rubric criteria editor
-│   │   │   ├── IdealCompletionEditor.tsx
-│   │   │   └── MetadataEditor.tsx
-│   │   ├── template/
-│   │   │   ├── AxesManager.tsx        # Manage available axes
-│   │   │   ├── ThemeManager.tsx       # Manage themes
-│   │   │   └── RubricTemplates.tsx    # Reusable rubric templates
-│   │   ├── io/
-│   │   │   ├── JsonlImporter.tsx
-│   │   │   └── JsonlExporter.tsx
-│   │   └── dashboard/
-│   │       └── SummaryPanel.tsx       # Statistics & charts
-│   ├── lib/
-│   │   ├── jsonl.ts                   # JSONL parsing/generation
-│   │   ├── validation.ts              # Zod schemas & validation logic
-│   │   ├── storage.ts                 # localStorage wrapper
-│   │   └── utils.ts                   # Utility functions
-│   └── types/
-│       └── healthbench.ts             # TypeScript type definitions
-├── public/
-│   └── screenshots/                   # Documentation screenshots
-├── .github/
-│   └── workflows/
-│       └── ci.yml                     # GitHub Actions CI
-├── package.json
-├── next.config.mjs
-├── tsconfig.json
-├── tailwind.config.ts
-├── components.json                    # shadcn/ui config
-├── LICENSE                            # MIT License
-├── CONTRIBUTING.md
-├── CODE_OF_CONDUCT.md
-└── ROADMAP.md
+```bash
+git clone https://github.com/YOUR_USERNAME/healthbench-data-creator.git
+cd healthbench-data-creator
+npm install
+npm run dev
+# open http://localhost:3000
 ```
 
-### Data Flow
+### Export/Import
+- Export: select examples → **Export JSONL** → download for `simple-evals`.
+- Import: **Import JSONL** → pick a HealthBench-compliant file → review and edit.
 
-```
-User Input (GUI Forms)
-        ↓
-Component State (React Hook Form)
-        ↓
-Validation Layer (Zod Schemas)
-        ↓
-Local Storage / State Management
-        ↓
-JSONL Export (Download)
-        ↓
-simple-evals (External evaluation)
-```
-
-### State Management Strategy
-
-**Phase 1 (MVP)**:
-- Local component state with `useState` and `useReducer`
-- React Hook Form for form state
-- localStorage for persistence
-
-**Phase 2 (Future)**:
-- Zustand for global state if complexity grows
-- Potential backend integration (file system, database, or GitHub API)
-
-## Data Model
-
-The core TypeScript types are designed to map directly to HealthBench's JSONL format:
-
-```typescript
-// Chat roles in multi-turn conversations
-type ChatRole = "patient" | "assistant" | "clinician" | "system";
-
-// A single turn in the conversation
-interface ChatTurn {
-  role: ChatRole;
-  content: string;
-}
-
-// Model-generated ideal responses
-interface IdealCompletion {
-  id: string;
-  content: string;
-  metadata?: {
-    author?: string;
-    notes?: string;
-  };
-}
-
-// Evaluation axes (extensible)
-type AxisId =
-  | "accuracy"
-  | "completeness"
-  | "context_awareness"
-  | "communication"
-  | "instruction_following"
-  | string; // Allow custom axes
-
-// Individual rubric criterion
-interface RubricItem {
-  criterion_id: string;
-  criterion: string;
-  axis: AxisId;
-  points: number;
-  metadata?: {
-    consensus?: boolean;
-    notes?: string;
-  };
-}
-
-// Example-level metadata
-interface ExampleMetadata {
-  difficulty?: "easy" | "medium" | "hard";
-  language?: string;
-  specialty?: string;
-  created_by?: string;
-  created_at?: string; // ISO8601
-  tags?: string[];
-}
-
-// Complete HealthBench example (one JSONL line)
-interface HealthbenchExample {
-  id: string;
-  theme: string[];
-  source: string;
-  prompt: ChatTurn[];
-  ideal_completions?: IdealCompletion[];
-  rubrics: RubricItem[];
-  metadata?: ExampleMetadata;
-}
-
-// Specialty project configuration
-interface SpecialtyProject {
-  name: string;
-  description: string;
-  availableAxes: AxisId[];
-  commonThemes: string[];
-  rubricTemplates: RubricTemplate[];
-  examples: HealthbenchExample[];
-  metadata: {
-    created_at: string;
-    updated_at: string;
-    version: string;
-  };
-}
-```
-
-### Validation Strategy
-
-Using **Zod** for runtime validation:
-
-1. **Schema Definition**: Zod schemas mirror TypeScript types
-2. **Real-time Validation**: Form fields validate on blur/change
-3. **Pre-export Validation**: Full validation before JSONL export
-4. **Error Reporting**: User-friendly error messages with field highlighting
-
-Key validations:
-- Required fields (id, theme, source, prompt, rubrics)
-- ID uniqueness across examples and criterion_ids
-- Valid axis values against specialty configuration
-- Proper chat turn structure (role + content)
-- Points >= 0 in rubrics
-- Valid ISO8601 timestamps
+More setup details: see [SETUP.md](./SETUP.md). Architecture and design notes: see [PROJECT_SUMMARY.md](./PROJECT_SUMMARY.md).
 
 ## Setup
 
